@@ -51,19 +51,17 @@
         </ol>
     </div>
     <script>
-    
-
         var ol = document.querySelector('.circle')
         var ollis = ol.getElementsByTagName('li')
         var m = 0
         progress(ollis[m].children[0])
         function progress(obj) {
             obj.timer = setInterval(function () {
-                obj.style.width = obj.getBoundingClientRect().width + ollis[m].getBoundingClientRect().width/100 + 'px'
+                obj.style.width = obj.getBoundingClientRect().width + ollis[m].getBoundingClientRect().width / 100 + 'px'
                 if (obj.offsetWidth >= ollis[m].getBoundingClientRect().width) {
                     clearInterval(obj.timer)
                     obj.style.width = 0 + 'px'
-                    m++                    
+                    m++
                     if (m == 5) m = 0
                     progress(ollis[m].children[0])
                 }
@@ -75,13 +73,6 @@
         ol.onmouseleave = function () {
             progress(ollis[m].children[0])
         }
-
-
-
-
-
-
-
     </script>
 </body>
 
