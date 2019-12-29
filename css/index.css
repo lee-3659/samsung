@@ -1,0 +1,294 @@
+/* 设置body的最小最大宽度 */
+  body {
+    padding: 0;
+    margin: 0;
+    min-width: 500px;
+    max-width: 1440px;
+    /* flexible 给我们划分了 10 等份 */
+    width: 10rem;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-family: Arial, Helvetica;
+  }
+  @media screen and (min-width: 1440px) {
+    html {
+      font-size: 144px!important;
+    }
+  }
+  a {
+    font-size: .083333rem;
+    color:#333;
+  }
+  a:hover{
+    color: orange;
+  }
+ 
+  /* 版xin */
+
+  .fl {
+    float: left;
+  }
+  .fr {
+    float: right;
+  }
+  /* 头部header */
+  .header{
+    position: relative;
+    width: 10rem;
+    height: 70px;
+
+  }
+  .a li ,
+ .b li{
+    float: left;
+    margin-right: .133333rem;
+    font-size: .083333rem;
+    font-weight: 600;
+  }
+  .a {
+    position: absolute;
+    top: 50%;
+    left: 1%;
+    transform: translateY(-50%);
+  }
+  .b {
+    position: absolute;
+    top: 50%;
+    right: 4%;
+    transform: translateY(-50%);
+  }
+  /* 顶部logo */
+  .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: .213333rem;
+  }
+  h1{
+    font-size: 0;
+  }
+  /* 小页面的下拉菜单按钮 */
+.dropdown {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: .333333rem;
+    height: .333333rem;
+    outline: none;
+    background-color: #fff;
+    border: none;
+}
+
+.dropdown img {
+    width: 100%;
+    display: block;
+}
+.nav {
+    display: none;
+}
+.search-btn{
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+.search-btn img {
+  width: 100%;
+  display: block;
+}
+.boder {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width:13.333333rem;
+  height: .006944rem;
+  background-color: #000;
+}
+
+.swiper-container {
+  overflow: hidden;
+  position: relative;
+  width: 10rem;
+  height:3.854167rem;
+}
+
+a.arrow-l,
+a.arrow-r {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: .3125rem;
+  height: .625rem;
+  text-align: center;
+  color: #fff;
+  font-size: .138889rem;
+  line-height: .65rem;
+  z-index: 2;
+}
+a.arrow-l:active,
+a.arrow-r:active{
+  border: 1px solid orange;
+}
+
+.arrow-l{
+  left: 10px;
+}
+.arrow-r {
+  right: 10px;
+}
+.swiper-container .swiper-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10rem;
+  height: 3.854167rem;
+}
+.swiper-slider li {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10rem;
+  height: 3.854167rem;
+  opacity: 0;
+
+}
+.swiper-slider li:nth-child(1){
+  background: url(../upload/1440x555-w20-20191126.jpg);
+  background-size: 10rem 3.854167rem;
+}
+
+.swiper-slider li:nth-child(2){
+  background: url(../upload/home_kv_galaxy_note10plus_aura_glow_pc_single_5g_1_jpg.webp);
+  background-size: 10rem 3.854167rem;
+}
+.swiper-slider li:nth-child(3){
+  background: url(../upload/1440x555-ctv-20191126.jpg);
+  background-size: 10rem 3.854167rem;
+}
+.swiper-slider li:nth-child(4){
+  background: url(../upload/1440x555-bingxi.jpg);
+  background-size: 10rem 3.854167rem;
+
+}
+.swiper-slider li:nth-child(5),
+.swiper-slider li:nth-child(3){
+  background: url(../upload/1440x555-ses-20190926-3.jpg);
+  background-size: 10rem 3.854167rem;
+  color: #fff;
+}
+.swiper-slider li:nth-child(5) a,
+.swiper-slider li:nth-child(3) a {
+  color: #fff;
+  border: 1px solid #fff;
+  padding: .069444rem .208333rem;
+  border-radius: .138889rem;
+  margin-top: .173611rem;
+}
+
+.txt1 {
+  position: absolute;
+  top: 28%;
+  right: 23%;
+}
+.txt2 {
+  position: absolute;
+  top: 44%;
+  right: 21%;
+}
+ h2{
+  font-size: .3125rem;
+  font-weight:700;
+ margin: 0;
+ padding: 0;
+}
+h3 {
+  font-size: .125rem;
+}
+.swiper-slider li a{
+  display: inline-block;
+  font-size: .097222rem;
+}
+.buy{
+  border: 1px solid #ccc;
+  padding: .069444rem .208333rem;
+  margin-top: 20px;
+  margin-left: .347222rem;
+  border-radius: .138889rem;
+}
+
+.circle {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.circle li {
+  position: relative;
+  overflow: hidden;
+  float: left;
+  width: .902778rem;
+  height: .243056rem;
+  margin: 0 3px;
+  cursor: pointer;
+}
+.circle li p {
+  position: absolute;
+  left: 50%;
+  bottom: -90%;
+  transform: translateX(-50%);
+  width: 100%;
+  font-size: .111111rem;
+  font-weight: 600;
+  text-align: center;
+}
+.circle li a{
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: .013889rem;
+  background-color: #000;
+}
+.circle li span {
+  display: block;
+  width: .902778rem;
+  height: .013889rem;
+  background-color:rgba(0,0,0,.3)
+}
+
+.circle li.current {
+  background-color: #222;
+}
+.active {
+  opacity: 1 !important;
+}
+.pause-btn {
+  position: absolute;
+  right: 23%;
+  bottom: 2.5%;
+  width: .222222rem;
+  height: .222222rem;
+  z-index: 999;
+  text-align: center;
+  line-height: .222222rem;
+  cursor: pointer;
+
+}
+.pause-btn span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: .083333rem;
+  height: .083333rem;
+  background: url(../images/new-home-ico-pause-black.svg) ;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}

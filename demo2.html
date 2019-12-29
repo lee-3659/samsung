@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+    <style>
+        ol,
+        li {
+            list-style: none;
+        }
+
+        ol {
+            overflow: hidden;
+            margin: 100px auto;
+            width: 600px;
+            height: 20px;
+            background-color: #ccc;
+        }
+
+        li {
+            overflow: hidden;
+            float: left;
+            width: 100px;
+            height: 3px;
+            margin-right: 10px;
+            background-color: rgba(0, 0, 0, .3);
+            cursor: pointer;
+        }
+
+        a {
+            width: 0px;
+            height: 3px;
+            display: block;
+            background-color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ol class="circle">
+            <li><a href="javascript:;"></a></li>
+            <li><a href="javascript:;"></a></li>
+            <li><a href="javascript:;"></a></li>
+            <li><a href="javascript:;"></a></li>
+            <li><a href="javascript:;"></a></li>
+        </ol>
+    </div>
+    <script>
+    
+
+        var ol = document.querySelector('.circle')
+        var ollis = ol.getElementsByTagName('li')
+        var m = 0
+        progress(ollis[m].children[0])
+        function progress(obj) {
+            obj.timer = setInterval(function () {
+                obj.style.width = obj.getBoundingClientRect().width + ollis[m].getBoundingClientRect().width/100 + 'px'
+                if (obj.offsetWidth >= ollis[m].getBoundingClientRect().width) {
+                    clearInterval(obj.timer)
+                    obj.style.width = 0 + 'px'
+                    m++                    
+                    if (m == 5) m = 0
+                    progress(ollis[m].children[0])
+                }
+            }, 40)
+        }
+        ol.onmouseenter = function () {
+            clearInterval(ollis[m].children[0].timer)
+        }
+        ol.onmouseleave = function () {
+            progress(ollis[m].children[0])
+        }
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
